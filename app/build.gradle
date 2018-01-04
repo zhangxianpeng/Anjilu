@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+// 添加插件
+apply plugin: "com.mob.sdk"
+
+//mob官方测试
+//public static final String APP_KEY = "f3fc6baa9ac4";
+//public static final String APP_SECRET = "7f3dedcb36d92deebcb373af921d635a";
+
+//安记录
+//public static final String APP_KEY = "1e5ec07ffb578";
+//public static final String APP_SECRET = "81de7153bd8e4bbef41a37e3538cceec";
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "1e5ec07ffb578"
+    appSecret "81de7153bd8e4bbef41a37e3538cceec"
+    SMSSDK {}
+}
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        applicationId "com.example.administrator.testapk"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories
+        {
+            flatDir {
+                dirs 'libs' //就是你放aar的目录地址
+            }
+        }
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile files('libs/android-support-v4.jar')
+    compile 'com.android.support:design:24.1.1'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '25.3.0'
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">办公账号助手</string>
+    <string name="dialog_title">当前账户未设置查询密码</string>
+    <string name="dialog_message">是否设置查询密码</string>
+    <string name="dialog_pbtn">现在设置</string>
+    <string name="dialog_nbtn">暂不设置</string>
+    <string name="EncryptionType0">普通</string>
+    <string name="EncryptionType1">加密</string>
+    <string name="EncryptionType2">超密</string>
+
+    <string name="dialog_addmsg_title">你本次添加的账号信息：</string>
+    <string name="dialog_addmsg_message_systemtype">系统类型：</string>
+    <string name="dialog_addmsg_message_account">账号：</string>
+    <string name="dialog_addmsg_message_pwd">密码：</string>
+    <string name="dialog_addmsg_message_encryptionType">加密类型：</string>
+    <string name="dialog_addmsg_pbtn">保存</string>
+    <string name="dialog_addmsg_nbtn">返回修改</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_petrol_station">PetrolStation</string>
+
+    <color name="form_text_color_tagging">#333</color>
+    <color name="public_anhui_color">#dddddd</color>
+</resources>

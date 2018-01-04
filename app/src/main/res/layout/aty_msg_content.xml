@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@mipmap/bg"
+    android:layout_height="match_parent">
+
+    <com.example.administrator.view.TitleBar
+    android:id="@+id/title_msg_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="系统名称"/>
+
+    <EditText
+        android:id="@+id/et_sysname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"/>
+    </LinearLayout>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginLeft="20dp"
+android:layout_marginRight="20dp"
+android:layout_marginTop="20dp"
+android:orientation="horizontal">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="账号"/>
+
+<EditText
+    android:id="@+id/et_account"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="4"/>
+</LinearLayout>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginLeft="20dp"
+android:layout_marginRight="20dp"
+android:layout_marginTop="20dp"
+android:orientation="horizontal">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:text="密码"/>
+
+<EditText
+    android:id="@+id/et_pwd"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="4"/>
+</LinearLayout>
+
+    </LinearLayout>
+
